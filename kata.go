@@ -26,33 +26,20 @@ func Kata(number int) string {
 
 	}
 
-	if lcdNumber[1] == 1 {
-		kataNumber = fmt.Sprint(kataNumber, "_\n")
-		lcdNumber[1] = 0
-	}
-	if lcdNumber[3] == 1 && lcdNumber[4] == 1 {
-		kataNumber = fmt.Sprint(kataNumber, "_|\n")
-		lcdNumber[3] = 0
-		lcdNumber[4] = 0
-	}
-	if lcdNumber[5] == 1 && lcdNumber[6] == 1 {
-		kataNumber = fmt.Sprint(kataNumber, "|_\n")
-		lcdNumber[5] = 0
-		lcdNumber[6] = 0
-	}
-	if lcdNumber[6] == 1 && lcdNumber[7] == 1 {
-		kataNumber = fmt.Sprint(kataNumber, "_|\n")
-		lcdNumber[6] = 0
-		lcdNumber[7] = 0
-	}
-
-	if lcdNumber[4] == 1 {
-		kataNumber = fmt.Sprint(kataNumber, "|\n")
-		lcdNumber[4] = 0
-	}
-	if lcdNumber[7] == 1 {
-		kataNumber = fmt.Sprint(kataNumber, "|\n")
-		lcdNumber[7] = 0
+	for i := 0; i < 8; i++ {
+		if lcdNumber[i] == 1 {
+			if i == 1 || i == 3 || i == 6 {
+				kataNumber = fmt.Sprint(kataNumber, "_")
+			} else {
+				kataNumber = fmt.Sprint(kataNumber, "|")
+			}
+			if i == 3 && lcdNumber[4] == 0 {
+				kataNumber = fmt.Sprint(kataNumber, "\n")
+			}
+			if i == 1 || i == 4 {
+				kataNumber = fmt.Sprint(kataNumber, "\n")
+			}
+		}
 	}
 
 	return kataNumber

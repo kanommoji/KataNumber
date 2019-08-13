@@ -3,7 +3,7 @@ package kata
 import "testing"
 
 func Test_Kata_Input_1_Should_be_kata_1(t *testing.T) {
-	expectedResult := "|\n|\n"
+	expectedResult := "|\n|"
 
 	actualResult := Kata(1)
 
@@ -13,7 +13,7 @@ func Test_Kata_Input_1_Should_be_kata_1(t *testing.T) {
 }
 
 func Test_Kata_Input_2_Should_be_kata_2(t *testing.T) {
-	expectedResult := "_\n_|\n|_\n"
+	expectedResult := "_\n_|\n|_"
 
 	actualResult := Kata(2)
 
@@ -23,7 +23,7 @@ func Test_Kata_Input_2_Should_be_kata_2(t *testing.T) {
 }
 
 func Test_Kata_Input_3_Should_be_kata_3(t *testing.T) {
-	expectedResult := "_\n_|\n_|\n"
+	expectedResult := "_\n_|\n_|"
 
 	actualResult := Kata(3)
 
