@@ -2,7 +2,7 @@ package kata
 
 import "fmt"
 
-func Kata(number int) string {
+func ToDigitalNumbers(number int) string {
 	var lcdNumber [8]int
 	var kataNumber string
 	if number == 1 {
